@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E.A.R.T.H Project 🌎</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+ 
+    body {
+      background-color: #f7faf7;
+      color: #333;
+      overflow-x: hidden;
+    }
+ 
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(46, 125, 50, 0.9);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      z-index: 1000;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+ 
+    header h1 {
+      font-size: 1.5em;
+      letter-spacing: 2px;
+    }
+ 
+    nav {
+      margin-top: 8px;
+    }
+ 
+    nav a {
+      background: #fff;
+      color: #2e7d32;
+      padding: 8px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+ 
+    nav a:hover {
+      background: #c8e6c9;
+    }
+ 
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background-image: url("works.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+ 
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+ 
+    .hero h2, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+ 
+    .hero h2 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+ 
+    .hero p {
+      font-size: 1.3em;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+ 
+    .hero button {
+      position: relative;
+      z-index: 1;
+      padding: 12px 30px;
+      font-size: 1em;
+      color: #2e7d32;
+      background-color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+ 
+    .hero button:hover {
+      background-color: #c8e6c9;
+      transform: scale(1.05);
+    }
+ 
+    /* Gallery Section */
+    .gallery {
+      padding: 80px 20px;
+      background: #f9fff9;
+      text-align: center;
+    }
+ 
+    .gallery h3 {
+      color: #2e7d32;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+ 
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+ 
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+ 
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+ 
+    /* Footer */
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+ 
+    footer a {
+      color: #ffeb3b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+ 
+    footer a:hover {
+      text-decoration: underline;
+    }
+ 
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+ 
+    /* Contact Section */
+    .contact {
+      background: #e8f5e9;
+      text-align: center;
+      padding: 80px 20px;
+    }
+ 
+    .contact h3 {
+      font-size: 2em;
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+ 
+    .contact p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+ 
+    .contact-box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+ 
+    .contact-box .info,
+    .contact-box .rewards {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      padding: 30px 20px;
+      max-width: 350px;
+      flex: 1;
+    }
+ 
+    .contact-box h4 {
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+ 
+    .contact-box .phone {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #1b5e20;
+    }
+ 
+    .contact a {
+      color: #2e7d32;
+      font-weight: bold;
+      text-decoration: none;
+    }
+ 
+    .contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+  <header>
+    <h1>E.A.R.T.H Project 🌍</h1>
+    <nav>
+      <a href="#home">Home</a>
+    </nav>
+  </header>
+ 
+  <section class="hero" id="home">
+    <h2>Educate • Act • Reduce • Transform • Help</h2>
+    <p>Join us in promoting <strong>Responsible Consumption and Production (SDG 12)</strong> through awareness and daily eco-friendly actions.</p>
+    <button onclick="window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })">Explore Our Mission</button>
+  </section>
+ 
+  <section class="gallery">
+    <h3>Our Goals</h3>
+    <div class="gallery-grid">
+      <img src="goal5.jpg" alt="SDG teamwork">
+      <img src="goal1.jpg" alt="Recycling bins">
+      <img src="goal2.jpg" alt="Sustainable packaging">
+      <img src="goal3.jpg" alt="Students eco project">
+      <img src="goal4.jpg" alt="Upcycling art">
+    </div>
+  </section>
+ 
+  <section class="contact" id="contact">
+    <h3>🌿 Join the E.A.R.T.H Club!</h3>
+    <p>
+      Participate in our <strong>Zero-Waste Week Activities</strong> to help protect the planet and stand a chance to
+      <strong>WIN exciting prizes!</strong> 🏆
+    </p>
+ 
+    <div class="contact-box">
+      <div class="info">
+        <h4>📞 Contact Us</h4>
+        <p>Got questions or want to sign up for an activity?</p>
+        <p>Call or message us at:</p>
+        <p class="phone">📱 +62 897-8863-764</p>
+      </div>
+ 
+      <div class="rewards">
+        <h4>🎁 Prizes Await!</h4>
+        <p>Winners will be announced at the end of <strong>Zero-Waste Week!</strong></p>
+      </div>
+    </div>
+  </section>
+ 
+  <footer>
+    <p>🌿 Built for the <strong>E.A.R.T.H Project</strong> — Educate • Act • Reduce • Transform • Help</p>
+    <p>Aligned with <a href="https://sdgs.un.org/goals/goal12" target="_blank">SDG 12: Responsible Consumption & Production</a></p>
+  </footer>
+ 
+</body>
+</html>
